@@ -41,5 +41,39 @@ console.log(footer);
 /*var li = document.querySelector('#mainHeader li');
 console.log(li); */
 var li = document.querySelectorAll('#mainHeader li');
+
 console.log(li);
 
+
+// afficher le nombre d'éléments 
+var main = document.querySelector('#pageContent main');
+console.log(`L'élément main possède ${main.children.length} enfants`);
+
+// Modifier un element dans le DOM
+
+var mainP = document.querySelector('#pageContent main p');
+mainP.setAttribute('align', 'center');
+console.log(mainP);
+
+//ou bien 
+
+/*var mainP = document.querySelector('#pageContent main p');
+mainP.align ='right';
+console.log(mainP);*/
+
+// Créer de nouveaux éléments 
+// Ajouter un élément dans ul 
+
+var elema = document.createElement('a');
+elema.href = 'produit.html';
+var linklabel = document.createTextNode('produits');
+elema.appendChild(linklabel);
+var lielem = document.createElement('li');
+lielem.appendChild(elema);
+document.querySelector('#mainNav ul').appendChild(lielem);
+
+// Changer image via Javascript
+
+var pagecontent = document.getElementById('pageContent');
+pagecontent.style.backgroundImage = 'url(/images/image-2.jpg)';
+console.log(pagecontent);
